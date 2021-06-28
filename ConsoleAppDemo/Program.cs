@@ -23,8 +23,11 @@ namespace ConsoleAppDemo
             // Console.WriteLine(new Order(1, 2, 190, new decimal(99.09)));
             // Console.WriteLine(new Order(1, 2, 190, new decimal(99.09)));
             
+            /* new Order(1, 2, 190, new decimal(99.09))
+                .PrintInfo(() => Console.WriteLine("Test")); */
+
             new Order(1, 2, 190, new decimal(99.09))
-                .PrintInfo(() => Console.WriteLine("Test"));
+                .PrintInfo(order => Console.WriteLine($"Id = {order.Id}, ProductId = {order.ProductId}"));
         }
     }
 }

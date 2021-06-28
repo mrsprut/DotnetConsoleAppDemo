@@ -5,7 +5,8 @@ namespace ConsoleAppDemo
     {
         private static int lastId;
 
-        public delegate void PrintInfoDelegate();
+        // public delegate void PrintInfoDelegate();
+        public delegate void PrintInfoDelegate(Order order);
         public int Id { get; }
         public int UserId { get; }
         public int ProductId { get; }
@@ -33,7 +34,7 @@ namespace ConsoleAppDemo
 
         public void PrintInfo(PrintInfoDelegate printer)
         {
-            printer.Invoke();
+            printer.Invoke(this);
         }
 
         public override string ToString()
