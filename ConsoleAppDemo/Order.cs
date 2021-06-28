@@ -1,7 +1,7 @@
 namespace ConsoleAppDemo
 {
-    public struct Order
-    // public class Order
+    // public struct Order
+    public class Order
     {
         private static int lastId;
 
@@ -17,7 +17,7 @@ namespace ConsoleAppDemo
             Id = ++lastId;
         } */
 
-        public Order(int userId, int productId, int quantity, decimal price): this()
+        public Order(int userId, int productId, int quantity, decimal price)// : this()
         {
             Id = ++lastId;
             UserId = userId;

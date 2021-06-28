@@ -23,7 +23,8 @@ namespace ConsoleAppDemo
             // Console.WriteLine(new Order(1, 2, 190, new decimal(99.09)));
             // Console.WriteLine(new Order(1, 2, 190, new decimal(99.09)));
             
-            
+            new Order(1, 2, 190, new decimal(99.09))
+                .PrintInfo(() => Console.WriteLine("Test"));
         }
     }
 }
