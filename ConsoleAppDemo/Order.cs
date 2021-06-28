@@ -2,17 +2,17 @@ namespace ConsoleAppDemo
 {
     public class Order
     {
-        private static int lastId = 0;
-        private int id;
+        private static int lastId;
+        public int Id { get; }
 
         public Order()
         {
-            this.id = ++lastId;
+            Id = ++lastId;
         }
 
-        public int getId()
+        /* public int getId()
         {
             return id;
-        }
+        } */
     }
 }
